@@ -1,0 +1,20 @@
+name: Templates validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Validate JSON
+        uses: emmanuelgautier/validate-json@v2
+        with:
+          files: templates/**/*.json

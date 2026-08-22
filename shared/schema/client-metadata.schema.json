@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cimd.cerberauth.com/schema/client-metadata.schema.json",
+  "title": "Client ID Metadata Document",
+  "description": "RFC 7591-derived metadata fields for a CIMD client_id document, per draft-ietf-oauth-client-id-metadata-document-02. Used by validate.ts and referenced by template docs.",
+  "type": "object",
+  "required": ["client_id"],
+  "properties": {
+    "client_id": { "type": "string", "format": "uri" },
+    "client_id_expires_at": { "type": "integer", "minimum": 0 },
+    "client_name": { "type": "string" },
+    "redirect_uris": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    },
+    "token_endpoint_auth_method": {
+      "type": "string",
+      "enum": ["none", "private_key_jwt"]
+    },
+    "grant_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "response_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "scope": { "type": "string" },
+    "jwks": {
+      "type": "object",
+      "required": ["keys"],
+      "properties": {
+        "keys": {
+          "type": "array",
+          "items": { "type": "object" }
+        }
+      }
+    },
+    "jwks_uri": { "type": "string", "format": "uri" },
+    "logo_uri": { "type": "string", "format": "uri" },
+    "client_uri": { "type": "string", "format": "uri" },
+    "policy_uri": { "type": "string", "format": "uri" },
+    "tos_uri": { "type": "string", "format": "uri" },
+    "contacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "not": {
+    "anyOf": [{ "required": ["client_secret"] }, { "required": ["client_secret_expires_at"] }]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cimd",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-22",
+  "compatibility_flags": [],
+  "build": {
+    "command": "npm run build:assets"
+  },
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "cimd.cerberauth.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./public"
+  },
+  "vars": {
+    "CIMD_SERVICE_ORIGIN": "https://cimd.cerberauth.com",
+    "CIMD_DEFAULT_TTL_SECONDS": "604800",
+    "CIMD_MAX_TTL_SECONDS": "2592000",
+    "CIMD_API_JWKS_URI": "https://oauth.cerberauth.com/.well-known/jwks.json",
+    "CIMD_API_ISSUER": "https://oauth.cerberauth.com",
+    "CIMD_API_AUDIENCE": "https://cimd.cerberauth.com"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CIMD_CLIENTS"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1,
+  },
+}

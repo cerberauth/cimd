@@ -1,0 +1,7 @@
+/output.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+
+/*-client.json
+  Cache-Control: public, max-age=3600, s-maxage=604800, stale-while-revalidate=604800
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer

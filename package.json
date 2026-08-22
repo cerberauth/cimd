@@ -1,0 +1,40 @@
+{
+  "name": "cimd",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CIMD Service (draft-ietf-oauth-client-id-metadata-document-02)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:assets && wrangler dev",
+    "build:assets": "npm run sync:templates && npm run build:css",
+    "dev:css": "tailwindcss -i ./src/styles/input.css -o ./public/output.css --watch=always",
+    "sync:templates": "node scripts/sync-templates.mjs",
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./public/output.css --minify",
+    "deploy": "npm run build:assets && wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@cerberauth/tokens": "0.3.1",
+    "hono": "4.13.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5",
+    "@eslint/js": "10.0.1",
+    "@tailwindcss/cli": "4.3.3",
+    "eslint": "10.9.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.11.0",
+    "prettier": "3.9.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.67.0",
+    "vitest": "4",
+    "wrangler": "4"
+  }
+}
