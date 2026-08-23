@@ -17,4 +17,5 @@ jobs:
       - name: Validate JSON
         uses: emmanuelgautier/validate-json@v2
         with:
-          files: templates/**/*.json
+          files: templates/*.json
+          schema: shared/schema/client-metadata.schema.json
