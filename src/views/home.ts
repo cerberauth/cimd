@@ -13,7 +13,7 @@ export function homePage(origin: string): string {
         <h3 class="font-semibold mb-1">${escapeHtml(name)}</h3>
         <p class="text-muted-fg text-sm leading-relaxed mb-4">${escapeHtml(note)}</p>
         <div class="flex items-center gap-3 text-xs">
-          <a href="https://github.com/cerberauth/cimd/tree/main/templates/${slug}" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 transition-colors">Example code →</a>
+          <a href="https://github.com/cerberauth/cimd/blob/main/templates/${slug}-client.json" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 transition-colors">Example code →</a>
           <a href="${escapeHtml(origin)}/${slug}-client.json" target="_blank" rel="noopener" class="font-mono text-muted-fg hover:text-on-surface-variant transition-colors">JSON template</a>
         </div>
       </article>`,

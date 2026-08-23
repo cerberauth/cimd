@@ -10,13 +10,15 @@ mkdirSync(publicDirectory, { recursive: true })
 // The public files are generated deployment assets. Remove stale generated
 // files first so deleting a source template also removes its public URL.
 for (const filename of readdirSync(publicDirectory)) {
-  if (filename.endsWith('-client.json')) unlinkSync(resolve(publicDirectory, filename))
+  if (filename.endsWith('-client.json')) {
+    unlinkSync(resolve(publicDirectory, filename))
+  }
 }
 
-for (const entry of readdirSync(templatesDirectory, { withFileTypes: true })) {
-  if (!entry.isDirectory()) continue
+for (const filename of readdirSync(templatesDirectory)) {
+  if (!filename.endsWith('-client.json')) {
+    continue
+  }
 
-  const source = resolve(templatesDirectory, entry.name, 'client-metadata.template.json')
-  const target = resolve(publicDirectory, `${entry.name}-client.json`)
-  copyFileSync(source, target)
+  copyFileSync(resolve(templatesDirectory, filename), resolve(publicDirectory, filename))
 }
