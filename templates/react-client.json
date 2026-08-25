@@ -1,9 +1,0 @@
-{
-  "client_name": "My React App (dev)",
-  "redirect_uris": ["http://localhost:5173/callback"],
-  "token_endpoint_auth_method": "none",
-  "grant_types": ["authorization_code"],
-  "response_types": ["code"],
-  "scope": "openid profile email",
-  "logo_uri": "https://example.com/logo.png"
-}

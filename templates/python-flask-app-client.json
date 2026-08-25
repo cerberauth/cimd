@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/python-flask-app-client.json",
+  "client_name": "Python Flask App",
+  "description": "Python Flask Application with OpenID Connect.",
+  "identifier": "flask-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/flask.svg",
+  "keywords": ["python", "flask"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

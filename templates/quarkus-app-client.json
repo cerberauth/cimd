@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/quarkus-app-client.json",
+  "client_name": "Quarkus Application",
+  "description": "Quarkus Application with OpenID Connect.",
+  "identifier": "quarkus-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/quarkus.svg",
+  "keywords": ["java", "quarkus"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

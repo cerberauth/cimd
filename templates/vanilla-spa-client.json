@@ -1,9 +1,0 @@
-{
-  "client_name": "My Vanilla SPA (dev)",
-  "redirect_uris": ["http://localhost:8080/callback"],
-  "token_endpoint_auth_method": "none",
-  "grant_types": ["authorization_code", "refresh_token"],
-  "response_types": ["code"],
-  "scope": "openid profile email",
-  "logo_uri": "https://example.com/logo.png"
-}

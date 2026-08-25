@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/windev-app-client.json",
+  "client_name": "WinDev / WebDev Application",
+  "description": "WinDev / WebDev Applications with OpenID Connect.",
+  "identifier": "windev-webdev-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/pc-soft.svg",
+  "keywords": ["windev", "webdev"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

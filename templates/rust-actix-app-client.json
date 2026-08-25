@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/rust-actix-app-client.json",
+  "client_name": "Rust actix app",
+  "description": "Rust actix application with OpenID Connect.",
+  "identifier": "rust-actix-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/rust.svg",
+  "keywords": ["rust"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

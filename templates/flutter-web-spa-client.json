@@ -1,0 +1,21 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/flutter-web-spa-client.json",
+  "client_name": "Flutter (Web) SPA",
+  "description": "Flutter (Web) Single Page Application with OpenID Connect.",
+  "identifier": "flutter-web-spa",
+  "logo_uri": "https://cimd.cerberauth.com/logos/flutter.svg",
+  "keywords": ["javascript", "dart", "flutter"],
+  "application_type": "spa",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": ["http://localhost:5173/callback"],
+  "libraries": [
+    {
+      "name": "openid_client",
+      "description": "OpenID Connect client library for Flutter web application.",
+      "url": "https://github.com/appsup-dart/openid_client"
+    }
+  ]
+}

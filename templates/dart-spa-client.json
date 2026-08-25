@@ -1,0 +1,21 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/dart-spa-client.json",
+  "client_name": "Dart SPA",
+  "description": "Dart Single Page Application with OpenID Connect.",
+  "identifier": "dart-spa",
+  "logo_uri": "https://cimd.cerberauth.com/logos/dart.svg",
+  "keywords": ["javascript", "dart"],
+  "application_type": "spa",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": ["http://localhost:5173/callback"],
+  "libraries": [
+    {
+      "name": "openid_client",
+      "description": "OpenID Connect client library for Dart browser application.",
+      "url": "https://github.com/appsup-dart/openid_client"
+    }
+  ]
+}
