@@ -5,13 +5,19 @@ import { createClient } from './routes/create'
 import { updateClient } from './routes/update'
 import { deleteClient } from './routes/delete'
 import { getClient } from './routes/get'
+import { validateClientDocument } from './routes/validate'
 import { apiAuth } from './middleware/apiAuth'
 import { jsonError } from './lib/responses'
 import { homePage } from './views/home'
+import { validatorPage } from './views/validator'
 
 const app = new Hono<{ Bindings: Env }>()
 
 app.get('/', (c) => c.html(homePage(c.env.CIMD_SERVICE_ORIGIN)))
+app.get('/validate', (c) => c.html(validatorPage(c.env.CIMD_SERVICE_ORIGIN)))
+
+// Public, unauthenticated: powers the /validate playground page above.
+app.post('/validate', validateClientDocument)
 
 // Document-serving path: kept trivial and cacheable, separate from /api/*.
 app.get('/c/:id', serveClientDocument)

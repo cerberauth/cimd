@@ -52,6 +52,60 @@ function isValidAbsoluteUri(value: unknown): boolean {
   }
 }
 
+const PRIVATE_HOSTNAME_PATTERNS = [
+  /^localhost$/i,
+  /^127\./,
+  /^10\./,
+  /^192\.168\./,
+  /^172\.(1[6-9]|2\d|3[01])\./,
+  /^0\.0\.0\.0$/,
+  /^::1$/,
+  /^169\.254\./,
+]
+
+/** Best-effort SSRF guard for hostnames the validator fetches on the caller's behalf. */
+export function isPrivateHostname(hostname: string): boolean {
+  return PRIVATE_HOSTNAME_PATTERNS.some((pattern) => pattern.test(hostname))
+}
+
+/**
+ * Structural checks the CIMD draft places on the client_id URL itself,
+ * independent of the document it resolves to (draft-ietf-oauth-client-id-metadata-document §4).
+ */
+export function validateClientIdUrl(rawUrl: string): { errors: string[]; warnings: string[] } {
+  const errors: string[] = []
+  const warnings: string[] = []
+
+  let url: URL
+  try {
+    url = new URL(rawUrl)
+  } catch {
+    errors.push('client_id must be a valid absolute URL')
+    return { errors, warnings }
+  }
+
+  if (url.protocol !== 'https:') {
+    errors.push('client_id must use the https scheme')
+  }
+  if (url.username || url.password) {
+    errors.push('client_id must not contain userinfo (e.g. "user:pass@host")')
+  }
+  if (!url.pathname || url.pathname === '/') {
+    errors.push('client_id must contain a path component')
+  }
+  if (url.pathname.split('/').some((segment) => segment === '.' || segment === '..')) {
+    errors.push('client_id path must not contain "." or ".." segments')
+  }
+  if (url.hash) {
+    errors.push('client_id must not contain a fragment')
+  }
+  if (url.search) {
+    warnings.push('client_id should not contain a query component')
+  }
+
+  return { errors, warnings }
+}
+
 /**
  * Pure validation function for a Client ID Metadata Document. Runs against
  * caller-supplied input BEFORE client_id / client_id_expires_at are set by
