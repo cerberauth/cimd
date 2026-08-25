@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/fastify-app-client.json",
+  "client_name": "Fastify App",
+  "description": "Fastify Application with OpenID Connect.",
+  "identifier": "fastify-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/fastify.svg",
+  "keywords": ["javascript", "typescript", "node.js", "fastify"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

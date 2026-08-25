@@ -1,0 +1,12 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/web-app-client.json",
+  "client_name": "Web Application",
+  "description": "Web Application (Server Side Rendered) with OpenID Connect. Sometimes called a Multi-Page Application or Regular Web Application.",
+  "identifier": "web-app",
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

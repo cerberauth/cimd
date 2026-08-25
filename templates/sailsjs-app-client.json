@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/sailsjs-app-client.json",
+  "client_name": "Sails.js App",
+  "description": "Sails.js Application with OpenID Connect.",
+  "identifier": "sailsjs-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/sailsjs.svg",
+  "keywords": ["javascript", "typescript", "node.js", "sails.js"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

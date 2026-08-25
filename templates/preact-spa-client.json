@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/preact-spa-client.json",
+  "client_name": "Preact SPA",
+  "description": "Preact Single Page Application with OpenID Connect.",
+  "identifier": "preact-spa",
+  "logo_uri": "https://cimd.cerberauth.com/logos/preact.svg",
+  "keywords": ["javascript", "preact"],
+  "application_type": "spa",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": ["http://localhost:5173/callback"]
+}

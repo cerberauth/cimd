@@ -1,0 +1,21 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/python-django-app-client.json",
+  "client_name": "Django App",
+  "description": "Django Application with OpenID Connect.",
+  "identifier": "django-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/django.svg",
+  "keywords": ["python", "django"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"],
+  "libraries": [
+    {
+      "name": "mozilla-django-oidc",
+      "description": "Django OpenID Connect relying party library maintained by Mozilla.",
+      "url": "https://github.com/mozilla/mozilla-django-oidc"
+    }
+  ]
+}

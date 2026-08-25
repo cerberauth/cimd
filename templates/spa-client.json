@@ -1,0 +1,13 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/spa-client.json",
+  "client_name": "SPA",
+  "description": "Single Page Application with OpenID Connect.",
+  "identifier": "spa",
+  "keywords": ["javascript"],
+  "application_type": "spa",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": ["http://localhost:5173/callback"]
+}

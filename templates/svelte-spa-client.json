@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/svelte-spa-client.json",
+  "client_name": "Svelte SPA",
+  "description": "Svelte Single Page Application with OpenID Connect.",
+  "identifier": "svelte-spa",
+  "logo_uri": "https://cimd.cerberauth.com/logos/svelte.svg",
+  "keywords": ["javascript", "svelte"],
+  "application_type": "spa",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": ["http://localhost:5173/callback"]
+}

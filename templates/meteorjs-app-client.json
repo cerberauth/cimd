@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/meteorjs-app-client.json",
+  "client_name": "Meteor.js App",
+  "description": "Meteor.js Application with OpenID Connect.",
+  "identifier": "meteorjs-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/meteorjs.svg",
+  "keywords": ["javascript", "typescript", "node.js", "meteor.js"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

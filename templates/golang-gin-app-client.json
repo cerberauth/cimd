@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/golang-gin-app-client.json",
+  "client_name": "Gin web framework App",
+  "description": "Gin web framework Application with OpenID Connect.",
+  "identifier": "golang-gin-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/golang.svg",
+  "keywords": ["go", "gin"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

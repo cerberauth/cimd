@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/nuxt-app-client.json",
+  "client_name": "Nuxt App",
+  "description": "Nuxt Application with OpenID Connect.",
+  "identifier": "nuxt-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/nuxt.svg",
+  "keywords": ["javascript", "vue", "nuxt"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

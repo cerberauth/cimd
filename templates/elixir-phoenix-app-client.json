@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/elixir-phoenix-app-client.json",
+  "client_name": "Phoenix App",
+  "description": "Elixir Phoenix Application with OpenID Connect.",
+  "identifier": "elixir-phoenix-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/phoenix.svg",
+  "keywords": ["erlang", "elixir", "phoenix"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

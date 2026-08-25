@@ -1,20 +1,20 @@
 import { layout, escapeHtml } from './layout.js'
 
 const TEMPLATES = [
-  { name: 'React / Vite', slug: 'react', note: 'Browser application starter' },
-  { name: 'Next.js', slug: 'nextjs', note: 'Server-side application starter' },
-  { name: 'Vanilla JavaScript', slug: 'vanilla-spa', note: 'No framework or build step' },
+  { name: 'React SPA', file: 'react-spa-client.json', note: 'Browser application starter' },
+  { name: 'Next.js App', file: 'nextjs-app-client.json', note: 'Server-side application starter' },
+  { name: 'SPA Starter', file: 'spa-client.json', note: 'Single Page Application with OpenID Connect' },
 ]
 
 export function homePage(origin: string): string {
   const templateCards = TEMPLATES.map(
-    ({ name, slug, note }) => `
+    ({ name, file, note }) => `
       <article class="bg-card text-card-fg border border-border rounded-xl p-5 hover:border-outline-variant transition-colors">
         <h3 class="font-semibold mb-1">${escapeHtml(name)}</h3>
         <p class="text-muted-fg text-sm leading-relaxed mb-4">${escapeHtml(note)}</p>
         <div class="flex items-center gap-3 text-xs">
-          <a href="https://github.com/cerberauth/cimd/blob/main/templates/${slug}-client.json" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 transition-colors">Example code →</a>
-          <a href="${escapeHtml(origin)}/${slug}-client.json" target="_blank" rel="noopener" class="font-mono text-muted-fg hover:text-on-surface-variant transition-colors">JSON template</a>
+          <a href="https://github.com/cerberauth/cimd/blob/main/templates/${file}" target="_blank" rel="noopener nofollow" class="text-primary hover:text-primary/80 transition-colors">Example code →</a>
+          <a href="${escapeHtml(origin)}/t/${file}" target="_blank" rel="noopener" class="font-mono text-muted-fg hover:text-on-surface-variant transition-colors">JSON template</a>
         </div>
       </article>`,
   ).join('')

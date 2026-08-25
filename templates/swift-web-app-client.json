@@ -1,0 +1,14 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/swift-web-app-client.json",
+  "client_name": "Swift Web App",
+  "description": "Swift Web Application with OpenID Connect.",
+  "identifier": "swift-web-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/swift.svg",
+  "keywords": ["swift"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"]
+}

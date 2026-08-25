@@ -35,9 +35,9 @@ Read the [OAuth Client ID Metadata Document draft](https://datatracker.ietf.org/
 
 Templates are public JSON documents, available without cloning the repository:
 
-- [`react-client.json`](https://cimd.cerberauth.com/react-client.json) — React / Vite
-- [`nextjs-client.json`](https://cimd.cerberauth.com/nextjs-client.json) — Next.js
-- [`vanilla-spa-client.json`](https://cimd.cerberauth.com/vanilla-spa-client.json) — plain browser JavaScript
+- [`react-spa-client.json`](https://cimd.cerberauth.com/t/react-spa-client.json) — React SPA
+- [`nextjs-app-client.json`](https://cimd.cerberauth.com/t/nextjs-app-client.json) — Next.js
+- [`spa-client.json`](https://cimd.cerberauth.com/t/spa-client.json) — Single Page Application with OpenID Connect
 
 Copy a template and replace its example values, especially `client_id`, `client_name`, `client_uri`, and `redirect_uris`. For production, publish the updated document at a permanent HTTPS URL on a domain you control. Do not use a localhost redirect, an example template unchanged, or an expiring development document as a production client identity.
 
@@ -62,14 +62,14 @@ The returned `client_id` can be used directly in development. Provisioned docume
 
 ## API reference
 
-| Endpoint                  | Method | Auth                     | Description                           |
-| ------------------------- | ------ | ------------------------ | ------------------------------------- |
-| `/api/clients`            | POST   | Bearer JWT (JWKS)        | Provision a temporary client document |
-| `/api/clients/:id`        | GET    | Bearer JWT + owner token | Read a provisioned document           |
-| `/api/clients/:id`        | PUT    | Bearer JWT + owner token | Update a provisioned document         |
-| `/api/clients/:id`        | DELETE | Bearer JWT + owner token | Revoke a provisioned document         |
-| `/c/:id`                  | GET    | None                     | Serve a provisioned CIMD document     |
-| `/:framework-client.json` | GET    | None                     | Serve a static starter template       |
+| Endpoint                    | Method | Auth                     | Description                           |
+| --------------------------- | ------ | ------------------------ | ------------------------------------- |
+| `/api/clients`              | POST   | Bearer JWT (JWKS)        | Provision a temporary client document |
+| `/api/clients/:id`          | GET    | Bearer JWT + owner token | Read a provisioned document           |
+| `/api/clients/:id`          | PUT    | Bearer JWT + owner token | Update a provisioned document         |
+| `/api/clients/:id`          | DELETE | Bearer JWT + owner token | Revoke a provisioned document         |
+| `/c/:id`                    | GET    | None                     | Serve a provisioned CIMD document     |
+| `/t/:framework-client.json` | GET    | None                     | Serve a static starter template       |
 
 ## Local development
 

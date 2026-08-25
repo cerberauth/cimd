@@ -1,0 +1,22 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/nextjs-app-client.json",
+  "client_name": "Next.js App",
+  "description": "Next.js Application with OpenID Connect.",
+  "identifier": "nextjs-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/nextjs.svg",
+  "keywords": ["javascript", "react", "next.js"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["https://cerberauth-nextjs-app-oidc.pages.dev/callback"],
+  "client_uri": "https://cerberauth-nextjs-app-oidc.pages.dev/",
+  "example": {
+    "name": "Next.js App Example",
+    "url": "https://cerberauth-nextjs-app-oidc.pages.dev/",
+    "repository": {
+      "url": "https://github.com/cerberauth/openid-connect-examples/tree/main/examples/nextjs-app"
+    }
+  }
+}

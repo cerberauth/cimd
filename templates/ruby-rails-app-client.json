@@ -1,0 +1,21 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/ruby-rails-app-client.json",
+  "client_name": "Ruby on Rails App",
+  "description": "Ruby on Rails Application with OpenID Connect.",
+  "identifier": "ruby-rails-app",
+  "logo_uri": "https://cimd.cerberauth.com/logos/rails.svg",
+  "keywords": ["ruby", "rails"],
+  "application_type": "web",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid offline_access profile email",
+  "redirect_uris": ["http://localhost:3000/callback"],
+  "libraries": [
+    {
+      "name": "omniauth-openid-connect",
+      "description": "OmniAuth strategy for OpenID Connect.",
+      "url": "https://github.com/omniauth/omniauth_openid_connect"
+    }
+  ]
+}

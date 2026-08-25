@@ -1,0 +1,22 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/react-spa-client.json",
+  "client_name": "React SPA",
+  "description": "React Single Page Application with OpenID Connect.",
+  "identifier": "react-spa",
+  "logo_uri": "https://cimd.cerberauth.com/logos/react.svg",
+  "keywords": ["javascript", "react"],
+  "application_type": "spa",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": ["https://cerberauth-react-spa-oidc.pages.dev/callback"],
+  "client_uri": "https://cerberauth-react-spa-oidc.pages.dev/",
+  "example": {
+    "name": "React SPA Example",
+    "url": "https://cerberauth-react-spa-oidc.pages.dev/",
+    "repository": {
+      "url": "https://github.com/cerberauth/openid-connect-examples/tree/main/examples/react-spa"
+    }
+  }
+}
