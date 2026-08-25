@@ -47,9 +47,12 @@ export function layout(title: string, body: string, description?: string, url?: 
       <a href="/" class="text-xl font-bold tracking-tight text-on-surface hover:text-on-surface hover:no-underline">
         c<span class="text-primary">imd</span>
       </a>
-      <span class="inline-flex items-center justify-center rounded-full border border-transparent bg-warning text-warning-fg px-2.5 py-1 text-xs font-medium">
-        DEV ONLY
-      </span>
+      <div class="flex items-center gap-4">
+        <a href="/validate" class="text-sm text-muted-fg hover:text-on-surface-variant hover:no-underline transition-colors">Validator</a>
+        <span class="inline-flex items-center justify-center rounded-full border border-transparent bg-warning text-warning-fg px-2.5 py-1 text-xs font-medium">
+          DEV ONLY
+        </span>
+      </div>
     </div>
   </header>
   <div class="flex-1">
