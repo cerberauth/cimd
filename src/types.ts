@@ -58,3 +58,32 @@ export interface StoredRecord {
   expiresAt: number
   ownerTokenHash: string
 }
+
+export interface TemplateExample {
+  name?: string
+  url?: string
+  repository?: {
+    url?: string
+    [k: string]: unknown
+  }
+  [k: string]: unknown
+}
+
+export interface TemplateLibrary {
+  name?: string
+  url?: string
+  repository?: {
+    url?: string
+    [k: string]: unknown
+  }
+  [k: string]: unknown
+}
+
+export interface ClientTemplate extends ClientMetadataDocument {
+  description?: string
+  identifier?: string
+  keywords?: string[]
+  application_type?: 'spa' | 'web' | string
+  example?: TemplateExample
+  libraries?: TemplateLibrary[]
+}

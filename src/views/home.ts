@@ -37,7 +37,7 @@ export function homePage(origin: string): string {
           CIMD lets an OAuth client identify itself with a URL instead of a pre-registered client ID. The URL points to a JSON document containing the client's metadata.
         </p>
         <div class="flex items-center gap-3 flex-wrap">
-          <a href="#templates" class="inline-flex items-center gap-2 bg-primary text-primary-fg font-semibold hover:bg-primary/90 px-6 py-3 rounded-lg transition-all text-sm">Browse templates →</a>
+          <a href="/t/" class="inline-flex items-center gap-2 bg-primary text-primary-fg font-semibold hover:bg-primary/90 px-6 py-3 rounded-lg transition-all text-sm">Browse templates →</a>
           <a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-border bg-surface hover:bg-accent text-on-surface-variant px-6 py-3 rounded-lg transition-colors text-sm">Read the IETF draft</a>
         </div>
       </div>
@@ -73,8 +73,13 @@ export function homePage(origin: string): string {
     </section>
 
     <section id="templates" class="max-w-4xl mx-auto px-6 pb-20">
-      <h2 class="text-2xl font-bold mb-2">CIMD templates</h2>
-      <p class="text-muted-fg text-sm mb-6 max-w-2xl">${escapeHtml(origin)} lists reusable templates for common OAuth clients. Start with one locally, then update its values for your application.</p>
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="text-2xl font-bold mb-1">CIMD templates</h2>
+          <p class="text-muted-fg text-sm max-w-2xl">${escapeHtml(origin)} lists reusable templates for common OAuth clients. Start with one locally, then update its values for your application.</p>
+        </div>
+        <a href="/t/" class="text-primary hover:text-primary/80 text-sm font-medium">View all templates →</a>
+      </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">${templateCards}</div>
     </section>
 

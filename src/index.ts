@@ -10,11 +10,14 @@ import { apiAuth } from './middleware/apiAuth'
 import { jsonError } from './lib/responses'
 import { homePage } from './views/home'
 import { validatorPage } from './views/validator'
+import { listTemplates } from './routes/templates'
 
 const app = new Hono<{ Bindings: Env }>()
 
 app.get('/', (c) => c.html(homePage(c.env.CIMD_SERVICE_ORIGIN)))
 app.get('/validate', (c) => c.html(validatorPage(c.env.CIMD_SERVICE_ORIGIN)))
+app.get('/t', listTemplates)
+app.get('/t/', listTemplates)
 
 // Public, unauthenticated: powers the /validate playground page above.
 app.post('/validate', validateClientDocument)
