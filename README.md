@@ -62,14 +62,15 @@ The returned `client_id` can be used directly in development. Provisioned docume
 
 ## API reference
 
-| Endpoint                    | Method | Auth                     | Description                           |
-| --------------------------- | ------ | ------------------------ | ------------------------------------- |
-| `/api/clients`              | POST   | Bearer JWT (JWKS)        | Provision a temporary client document |
-| `/api/clients/:id`          | GET    | Bearer JWT + owner token | Read a provisioned document           |
-| `/api/clients/:id`          | PUT    | Bearer JWT + owner token | Update a provisioned document         |
-| `/api/clients/:id`          | DELETE | Bearer JWT + owner token | Revoke a provisioned document         |
-| `/c/:id`                    | GET    | None                     | Serve a provisioned CIMD document     |
-| `/t/:framework-client.json` | GET    | None                     | Serve a static starter template       |
+| Endpoint                    | Method | Auth                     | Description                            |
+| --------------------------- | ------ | ------------------------ | -------------------------------------- |
+| `/api/clients`              | POST   | Bearer JWT (JWKS)        | Provision a temporary client document  |
+| `/api/clients/:id`          | GET    | Bearer JWT + owner token | Read a provisioned document            |
+| `/api/clients/:id`          | PUT    | Bearer JWT + owner token | Update a provisioned document          |
+| `/api/clients/:id`          | DELETE | Bearer JWT + owner token | Revoke a provisioned document          |
+| `/c/:id`                    | GET    | None                     | Serve a provisioned CIMD document      |
+| `/t/`                       | GET    | None                     | Templates catalog (HTML) / list (JSON) |
+| `/t/:framework-client.json` | GET    | None                     | Serve a static starter template        |
 
 ## Local development
 

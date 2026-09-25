@@ -1,9 +1,10 @@
-import { readdirSync, mkdirSync, unlinkSync, copyFileSync } from 'node:fs'
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, unlinkSync, copyFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 const root = resolve(import.meta.dirname, '..')
 const templatesDirectory = resolve(root, 'templates')
 const publicDirectory = resolve(root, 'public')
+const srcDirectory = resolve(root, 'src')
 
 mkdirSync(publicDirectory, { recursive: true })
 
@@ -18,10 +19,20 @@ for (const filename of readdirSync(publicTemplatesDirectory)) {
   }
 }
 
-for (const filename of readdirSync(templatesDirectory)) {
-  if (!filename.endsWith('.json')) {
-    continue
-  }
+const templates = []
+const filenames = readdirSync(templatesDirectory)
+  .filter((filename) => filename.endsWith('.json'))
+  .sort()
 
-  copyFileSync(resolve(templatesDirectory, filename), resolve(publicTemplatesDirectory, filename))
+for (const filename of filenames) {
+  const filePath = resolve(templatesDirectory, filename)
+  copyFileSync(filePath, resolve(publicTemplatesDirectory, filename))
+
+  const content = JSON.parse(readFileSync(filePath, 'utf8'))
+  templates.push(content)
 }
+
+templates.sort((a, b) => (a.client_name || '').localeCompare(b.client_name || ''))
+
+const templatesJson = JSON.stringify(templates, null, 2) + '\n'
+writeFileSync(resolve(srcDirectory, 'templates.json'), templatesJson)
