@@ -32,6 +32,8 @@ describe('CIMD templates endpoint (/t/ and /t)', () => {
     expect(html).toContain('templates-data')
     expect(html).toContain('React SPA')
     expect(html).toContain('Next.js App')
+    expect(html).toContain('Terraform')
+    expect(html).toContain('Native / CLI')
   })
 
   it('serves HTML page at /t', async () => {
@@ -70,6 +72,33 @@ describe('CIMD templates endpoint (/t/ and /t)', () => {
     expect(reactSpa?.client_id).toBe('https://cimd.cerberauth.com/t/react-spa-client.json')
     expect(reactSpa?.application_type).toBe('spa')
     expect(reactSpa?.redirect_uris).toBeDefined()
+
+    const terraform = templates.find((t) => t.identifier === 'terraform')
+    expect(terraform).toBeDefined()
+    expect(terraform?.client_name).toBe('Terraform')
+    expect(terraform?.client_id).toBe('https://cimd.cerberauth.com/t/terraform-client.json')
+    expect(terraform?.application_type).toBe('native')
+    expect(terraform?.redirect_uris).toBeDefined()
+
+    const opentofu = templates.find((t) => t.identifier === 'opentofu')
+    expect(opentofu).toBeDefined()
+    expect(opentofu?.client_name).toBe('OpenTofu')
+    expect(opentofu?.application_type).toBe('native')
+
+    const pulumi = templates.find((t) => t.identifier === 'pulumi')
+    expect(pulumi).toBeDefined()
+    expect(pulumi?.client_name).toBe('Pulumi')
+    expect(pulumi?.application_type).toBe('native')
+
+    const ansible = templates.find((t) => t.identifier === 'ansible')
+    expect(ansible).toBeDefined()
+    expect(ansible?.client_name).toBe('Ansible')
+    expect(ansible?.application_type).toBe('native')
+
+    const kubectl = templates.find((t) => t.identifier === 'kubectl')
+    expect(kubectl).toBeDefined()
+    expect(kubectl?.client_name).toBe('Kubectl')
+    expect(kubectl?.application_type).toBe('native')
   })
 
   it('returns JSON array of templates when Accept is application/json at /t', async () => {

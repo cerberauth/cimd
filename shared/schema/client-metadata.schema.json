@@ -17,6 +17,9 @@
       "type": "string",
       "enum": ["none", "private_key_jwt"]
     },
+    "application_type": {
+      "type": "string"
+    },
     "grant_types": {
       "type": "array",
       "items": { "type": "string" }

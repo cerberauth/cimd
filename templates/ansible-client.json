@@ -1,0 +1,23 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/ansible-client.json",
+  "client_name": "Ansible",
+  "description": "Red Hat Ansible infrastructure automation and configuration management with OAuth 2.0.",
+  "identifier": "ansible",
+  "logo_uri": "https://cimd.cerberauth.com/logos/ansible.svg",
+  "keywords": ["ansible", "automation", "iac", "devops", "redhat", "configuration", "cli"],
+  "application_type": "native",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": [
+    "http://localhost:8080/callback",
+    "http://localhost:3000/callback",
+    "http://127.0.0.1:8080/callback"
+  ],
+  "client_uri": "https://www.ansible.com/",
+  "example": {
+    "name": "Ansible Automation Platform OAuth2 Documentation",
+    "url": "https://docs.ansible.com/"
+  }
+}

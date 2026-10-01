@@ -1,0 +1,25 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/terraform-client.json",
+  "client_name": "Terraform",
+  "description": "HashiCorp Terraform Infrastructure as Code (IaC) CLI with OAuth 2.0.",
+  "identifier": "terraform",
+  "logo_uri": "https://cimd.cerberauth.com/logos/terraform.svg",
+  "keywords": ["terraform", "iac", "devops", "hashicorp", "infrastructure", "cloud", "cli"],
+  "application_type": "native",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": [
+    "http://localhost:10000/",
+    "http://localhost:10000/callback",
+    "http://localhost:10001/callback",
+    "http://127.0.0.1:10000/",
+    "http://127.0.0.1:10000/callback"
+  ],
+  "client_uri": "https://www.terraform.io/",
+  "example": {
+    "name": "Terraform Login Protocol",
+    "url": "https://developer.hashicorp.com/terraform/internals/login"
+  }
+}

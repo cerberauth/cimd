@@ -122,6 +122,7 @@ export function templatesPage(templates: ClientTemplate[], origin: string): stri
             <button type="button" data-filter-type="all" class="type-filter-btn px-3 py-1.5 rounded-md text-xs font-medium bg-primary text-primary-fg transition-colors" aria-pressed="true">All</button>
             <button type="button" data-filter-type="spa" class="type-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-muted-fg hover:text-on-surface transition-colors" aria-pressed="false">SPA</button>
             <button type="button" data-filter-type="web" class="type-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-muted-fg hover:text-on-surface transition-colors" aria-pressed="false">Web App</button>
+            <button type="button" data-filter-type="native" class="type-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-muted-fg hover:text-on-surface transition-colors" aria-pressed="false">Native / CLI</button>
           </div>
         </div>
 
@@ -141,6 +142,8 @@ export function templatesPage(templates: ClientTemplate[], origin: string): stri
             <button type="button" class="tag-filter-btn hover:text-primary transition-colors cursor-pointer" data-tag="php">PHP</button>
             <span>·</span>
             <button type="button" class="tag-filter-btn hover:text-primary transition-colors cursor-pointer" data-tag="dotnet">.NET</button>
+            <span>·</span>
+            <button type="button" class="tag-filter-btn hover:text-primary transition-colors cursor-pointer" data-tag="iac">IaC</button>
           </div>
 
           <div class="flex items-center gap-2">

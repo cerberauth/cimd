@@ -19,6 +19,7 @@ const KNOWN_TOP_LEVEL_FIELDS = new Set([
   'client_name',
   'redirect_uris',
   'token_endpoint_auth_method',
+  'application_type',
   'grant_types',
   'response_types',
   'scope',
