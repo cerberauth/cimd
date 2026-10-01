@@ -62,6 +62,29 @@
     ]
   },
   {
+    "client_id": "https://cimd.cerberauth.com/t/ansible-client.json",
+    "client_name": "Ansible",
+    "description": "Red Hat Ansible infrastructure automation and configuration management with OAuth 2.0.",
+    "identifier": "ansible",
+    "logo_uri": "https://cimd.cerberauth.com/logos/ansible.svg",
+    "keywords": ["ansible", "automation", "iac", "devops", "redhat", "configuration", "cli"],
+    "application_type": "native",
+    "grant_types": ["authorization_code", "refresh_token"],
+    "response_types": ["code"],
+    "token_endpoint_auth_method": "none",
+    "scope": "openid profile email",
+    "redirect_uris": [
+      "http://localhost:8080/callback",
+      "http://localhost:3000/callback",
+      "http://127.0.0.1:8080/callback"
+    ],
+    "client_uri": "https://www.ansible.com/",
+    "example": {
+      "name": "Ansible Automation Platform OAuth2 Documentation",
+      "url": "https://docs.ansible.com/"
+    }
+  },
+  {
     "client_id": "https://cimd.cerberauth.com/t/astro-app-client.json",
     "client_name": "Astro App",
     "description": "Astro Application with OpenID Connect.",
@@ -419,6 +442,30 @@
     "redirect_uris": ["http://localhost:3000/callback"]
   },
   {
+    "client_id": "https://cimd.cerberauth.com/t/kubectl-client.json",
+    "client_name": "Kubectl",
+    "description": "Kubernetes command-line tool with OpenID Connect (OIDC) authentication.",
+    "identifier": "kubectl",
+    "logo_uri": "https://cimd.cerberauth.com/logos/kubernetes.svg",
+    "keywords": ["kubernetes", "k8s", "kubectl", "containers", "devops", "cloud", "cli"],
+    "application_type": "native",
+    "grant_types": ["authorization_code"],
+    "response_types": ["code"],
+    "token_endpoint_auth_method": "none",
+    "scope": "openid profile email",
+    "redirect_uris": [
+      "http://localhost:8000/",
+      "http://localhost:18000/",
+      "http://127.0.0.1:8000/",
+      "http://127.0.0.1:18000/"
+    ],
+    "client_uri": "https://kubernetes.io/docs/reference/kubectl/",
+    "example": {
+      "name": "Kubernetes OpenID Connect Tokens",
+      "url": "https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens"
+    }
+  },
+  {
     "client_id": "https://cimd.cerberauth.com/t/laravel-app-client.json",
     "client_name": "Laravel App",
     "description": "Laravel Application with OpenID Connect.",
@@ -553,6 +600,31 @@
     "redirect_uris": ["http://localhost:3000/callback"]
   },
   {
+    "client_id": "https://cimd.cerberauth.com/t/opentofu-client.json",
+    "client_name": "OpenTofu",
+    "description": "OpenTofu open-source Infrastructure as Code (IaC) tool with OAuth 2.0.",
+    "identifier": "opentofu",
+    "logo_uri": "https://cimd.cerberauth.com/logos/opentofu.svg",
+    "keywords": ["opentofu", "tofu", "iac", "devops", "infrastructure", "cloud", "cli"],
+    "application_type": "native",
+    "grant_types": ["authorization_code"],
+    "response_types": ["code"],
+    "token_endpoint_auth_method": "none",
+    "scope": "openid profile email",
+    "redirect_uris": [
+      "http://localhost:10000/",
+      "http://localhost:10000/callback",
+      "http://localhost:10001/callback",
+      "http://127.0.0.1:10000/",
+      "http://127.0.0.1:10000/callback"
+    ],
+    "client_uri": "https://opentofu.org/",
+    "example": {
+      "name": "OpenTofu Login Protocol",
+      "url": "https://opentofu.org/docs/internals/login/"
+    }
+  },
+  {
     "client_id": "https://cimd.cerberauth.com/t/elixir-phoenix-app-client.json",
     "client_name": "Phoenix App",
     "description": "Elixir Phoenix Application with OpenID Connect.",
@@ -607,6 +679,30 @@
     "token_endpoint_auth_method": "none",
     "scope": "openid profile email",
     "redirect_uris": ["http://localhost:5173/callback"]
+  },
+  {
+    "client_id": "https://cimd.cerberauth.com/t/pulumi-client.json",
+    "client_name": "Pulumi",
+    "description": "Pulumi Infrastructure as Code platform with OAuth 2.0 authentication.",
+    "identifier": "pulumi",
+    "logo_uri": "https://cimd.cerberauth.com/logos/pulumi.svg",
+    "keywords": ["pulumi", "iac", "devops", "infrastructure", "cloud", "cli", "typescript", "python", "go"],
+    "application_type": "native",
+    "grant_types": ["authorization_code"],
+    "response_types": ["code"],
+    "token_endpoint_auth_method": "none",
+    "scope": "openid profile email",
+    "redirect_uris": [
+      "http://localhost:3000/callback",
+      "http://localhost:8080/callback",
+      "http://localhost:10000/callback",
+      "http://127.0.0.1:3000/callback"
+    ],
+    "client_uri": "https://www.pulumi.com/",
+    "example": {
+      "name": "Pulumi CLI Login Documentation",
+      "url": "https://www.pulumi.com/docs/iac/cli/commands/pulumi_login/"
+    }
   },
   {
     "client_id": "https://cimd.cerberauth.com/t/python-app-client.json",
@@ -978,6 +1074,31 @@
     "token_endpoint_auth_method": "none",
     "scope": "openid offline_access profile email",
     "redirect_uris": ["http://localhost:3000/callback"]
+  },
+  {
+    "client_id": "https://cimd.cerberauth.com/t/terraform-client.json",
+    "client_name": "Terraform",
+    "description": "HashiCorp Terraform Infrastructure as Code (IaC) CLI with OAuth 2.0.",
+    "identifier": "terraform",
+    "logo_uri": "https://cimd.cerberauth.com/logos/terraform.svg",
+    "keywords": ["terraform", "iac", "devops", "hashicorp", "infrastructure", "cloud", "cli"],
+    "application_type": "native",
+    "grant_types": ["authorization_code"],
+    "response_types": ["code"],
+    "token_endpoint_auth_method": "none",
+    "scope": "openid profile email",
+    "redirect_uris": [
+      "http://localhost:10000/",
+      "http://localhost:10000/callback",
+      "http://localhost:10001/callback",
+      "http://127.0.0.1:10000/",
+      "http://127.0.0.1:10000/callback"
+    ],
+    "client_uri": "https://www.terraform.io/",
+    "example": {
+      "name": "Terraform Login Protocol",
+      "url": "https://developer.hashicorp.com/terraform/internals/login"
+    }
   },
   {
     "client_id": "https://cimd.cerberauth.com/t/java-vaadin-app-client.json",

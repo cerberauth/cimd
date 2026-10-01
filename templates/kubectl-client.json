@@ -1,0 +1,24 @@
+{
+  "client_id": "https://cimd.cerberauth.com/t/kubectl-client.json",
+  "client_name": "Kubectl",
+  "description": "Kubernetes command-line tool with OpenID Connect (OIDC) authentication.",
+  "identifier": "kubectl",
+  "logo_uri": "https://cimd.cerberauth.com/logos/kubernetes.svg",
+  "keywords": ["kubernetes", "k8s", "kubectl", "containers", "devops", "cloud", "cli"],
+  "application_type": "native",
+  "grant_types": ["authorization_code"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "openid profile email",
+  "redirect_uris": [
+    "http://localhost:8000/",
+    "http://localhost:18000/",
+    "http://127.0.0.1:8000/",
+    "http://127.0.0.1:18000/"
+  ],
+  "client_uri": "https://kubernetes.io/docs/reference/kubectl/",
+  "example": {
+    "name": "Kubernetes OpenID Connect Tokens",
+    "url": "https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens"
+  }
+}

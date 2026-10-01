@@ -38,6 +38,7 @@ Templates are public JSON documents, available without cloning the repository:
 - [`react-spa-client.json`](https://cimd.cerberauth.com/t/react-spa-client.json) — React SPA
 - [`nextjs-app-client.json`](https://cimd.cerberauth.com/t/nextjs-app-client.json) — Next.js
 - [`spa-client.json`](https://cimd.cerberauth.com/t/spa-client.json) — Single Page Application with OpenID Connect
+- [`terraform-client.json`](https://cimd.cerberauth.com/t/terraform-client.json) — HashiCorp Terraform CLI
 
 Copy a template and replace its example values, especially `client_id`, `client_name`, `client_uri`, and `redirect_uris`. For production, publish the updated document at a permanent HTTPS URL on a domain you control. Do not use a localhost redirect, an example template unchanged, or an expiring development document as a production client identity.
 

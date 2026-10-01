@@ -38,6 +38,7 @@ export interface ClientMetadataDocument {
   token_endpoint_auth_method?: TokenEndpointAuthMethod
   grant_types?: string[]
   response_types?: string[]
+  application_type?: 'spa' | 'web' | 'native' | string
   scope?: string
   jwks?: JsonWebKeySet
   jwks_uri?: string
@@ -83,7 +84,7 @@ export interface ClientTemplate extends ClientMetadataDocument {
   description?: string
   identifier?: string
   keywords?: string[]
-  application_type?: 'spa' | 'web' | string
+  application_type?: 'spa' | 'web' | 'native' | string
   example?: TemplateExample
   libraries?: TemplateLibrary[]
 }

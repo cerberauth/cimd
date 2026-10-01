@@ -125,4 +125,9 @@ describe('validateClientMetadata', () => {
     expect(result.valid).toBe(true)
     expect(result.warnings.join()).toContain('urn:example:custom')
   })
+
+  it('accepts application_type as an RFC 7591 property', () => {
+    const result = validateClientMetadata({ application_type: 'native' })
+    expect(result.valid).toBe(true)
+  })
 })
