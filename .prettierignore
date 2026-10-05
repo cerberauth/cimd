@@ -3,4 +3,5 @@ dist
 coverage
 .wrangler
 public/output.css
+public/plausible.js
 package-lock.json

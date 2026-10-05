@@ -40,6 +40,7 @@ export function layout(title: string, body: string, description?: string, url?: 
   <link rel="canonical" href="${escapeHtml(ogUrl)}" />
   <title>${escapeHtml(title)} — cimd</title>
   <link rel="stylesheet" href="/output.css" />
+  <script defer src="/plausible.js"></script>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
   <header class="border-b border-border shrink-0">

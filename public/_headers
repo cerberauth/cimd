@@ -1,6 +1,9 @@
 /output.css
   Cache-Control: public, max-age=86400, stale-while-revalidate=86400
 
+/plausible.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+
 /t/*-client.json
   Cache-Control: public, max-age=3600, s-maxage=604800, stale-while-revalidate=604800
   X-Content-Type-Options: nosniff
