@@ -7,10 +7,11 @@
   "type": "module",
   "scripts": {
     "dev": "npm run build:assets && wrangler dev",
-    "build:assets": "npm run sync:templates && npm run build:css",
+    "build:assets": "npm run sync:templates && npm run build:css && npm run build:js",
     "dev:css": "tailwindcss -i ./src/styles/input.css -o ./public/output.css --watch=always",
     "sync:templates": "node scripts/sync-templates.mjs",
     "build:css": "tailwindcss -i ./src/styles/input.css -o ./public/output.css --minify",
+    "build:js": "esbuild src/scripts/plausible.ts --bundle --minify --format=iife --outfile=public/plausible.js",
     "deploy": "npm run build:assets && wrangler deploy",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -21,12 +22,14 @@
   },
   "dependencies": {
     "@cerberauth/tokens": "0.3.1",
+    "@plausible-analytics/tracker": "0.4.6",
     "hono": "4.13.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "5",
     "@eslint/js": "10.0.1",
     "@tailwindcss/cli": "4.3.3",
+    "esbuild": "0.28.2",
     "eslint": "10.9.0",
     "eslint-config-prettier": "10.1.8",
     "globals": "17.11.0",

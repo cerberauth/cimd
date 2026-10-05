@@ -11,5 +11,6 @@ describe('GET /', () => {
     const body = await res.text()
     expect(body).toContain('<!DOCTYPE html>')
     expect(body).toContain(env.CIMD_SERVICE_ORIGIN)
+    expect(body).toContain('<script defer src="/plausible.js"></script>')
   })
 })
