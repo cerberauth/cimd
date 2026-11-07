@@ -22,21 +22,21 @@
   },
   "dependencies": {
     "@cerberauth/tokens": "0.3.1",
-    "@plausible-analytics/tracker": "0.4.6",
-    "hono": "4.13.3"
+    "@plausible-analytics/tracker": "0.4.7",
+    "hono": "4.13.17"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "5",
     "@eslint/js": "10.0.1",
-    "@tailwindcss/cli": "4.3.3",
+    "@tailwindcss/cli": "4.3.5",
     "esbuild": "0.28.2",
-    "eslint": "10.9.0",
+    "eslint": "10.14.0",
     "eslint-config-prettier": "10.1.8",
-    "globals": "17.11.0",
-    "prettier": "3.9.6",
-    "tailwindcss": "4.3.3",
+    "globals": "17.14.0",
+    "prettier": "3.9.10",
+    "tailwindcss": "4.3.5",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.67.0",
+    "typescript-eslint": "8.72.1",
     "vitest": "4",
     "wrangler": "4"
   }
